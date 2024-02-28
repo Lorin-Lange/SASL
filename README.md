@@ -1,8 +1,8 @@
 # SASL-Compiler
 
-
-- _Betreuer:_ [Denis Hirn]
-- _Studenten:_ [Simon Klingler] & [Lorin Lange]
+This interpreter was developed by Simon Klingler and Lorin Lange as a semester long 
+exercise in software engineering. It was mentored by Denis Hirn at the University of Tuebingen
+at the chair for Database Systems in the summer 2022.
 
 ## Build the compiler ##
 

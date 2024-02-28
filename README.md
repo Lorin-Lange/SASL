@@ -2,9 +2,9 @@
 
 This interpreter was developed by Simon Klingler and Lorin Lange as a semester long 
 exercise in software engineering. It was mentored by Denis Hirn
-at Torsten Grust's chair for Database Systems at the University of Tuebingen in the summer 2022.
+at Torsten Grust's chair for Database Systems at the University of Tuebingen in the summer of 2022.
 
-There are two good presentations online about SASL and its history by David Turner:
+There are two good presentations online about SASL and its history by David Turner - its very designer:
 
 [David Turner - Some History of Functional Programming Languages - Code Mesh 2017](https://www.youtube.com/watch?v=SbgMY0ap4p0)
 

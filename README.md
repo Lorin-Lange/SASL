@@ -1,5 +1,9 @@
 # SASL-Compiler
 
+
+- _Betreuer:_ [Denis Hirn]
+- _Studenten:_ [Simon Klingler] & [Lorin Lange]
+
 ## Build the compiler ##
 
 <pre><code>stack build</code></pre>

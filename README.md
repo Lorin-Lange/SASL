@@ -4,6 +4,13 @@ This interpreter was developed by Simon Klingler and Lorin Lange as a semester l
 exercise in software engineering. It was mentored by Denis Hirn
 at Torsten Grust's chair for Database Systems at the University of Tuebingen in the summer 2022.
 
+There are two good presentations online about SASL and its history by David Turner:
+
+[David Turner - Some History of Functional Programming Languages - Code Mesh 2017](https://www.youtube.com/watch?v=SbgMY0ap4p0)
+
+[Some History of Functional Programming Languages - David Turner (Lambda Days 2017)](https://www.youtube.com/watch?v=QVwm9jlBTik)
+
+
 ## Build the compiler ##
 
 <pre><code>stack build</code></pre>

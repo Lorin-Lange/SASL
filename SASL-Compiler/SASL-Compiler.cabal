@@ -1,0 +1,124 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           SASL-Compiler
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/SASL-Compiler#readme>
+homepage:       https://github.com/githubuser/SASL-Compiler#readme
+bug-reports:    https://github.com/githubuser/SASL-Compiler/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/SASL-Compiler
+
+library
+  exposed-modules:
+      Backend.Compiler
+      Backend.OptimizedCompiler
+      Backend.Optimizer
+      Backend.Printer
+      Backend.ReductionMachine
+      Compiler
+      Frontend.Parser
+      Frontend.Primitives
+      SASLPrelude
+      Utilities.GraphVisualisation
+      Utilities.State
+      Utilities.Types
+  other-modules:
+      Paths_SASL_Compiler
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , fgl
+    , graphviz
+    , haskeline
+    , megaparsec
+    , mtl
+    , optparse-applicative
+    , text
+  default-language: Haskell2010
+
+executable SASL-Compiler-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_SASL_Compiler
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      SASL-Compiler
+    , base >=4.7 && <5
+    , containers
+    , fgl
+    , graphviz
+    , haskeline
+    , megaparsec
+    , mtl
+    , optparse-applicative
+    , text
+  default-language: Haskell2010
+
+test-suite SASL-Compiler-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      CustomLanguageFeaturesTestsSpec
+      MiscellaneousTestsSpec
+      SASLPreludeTestsSpec
+      Utilities.StateTestsSpec
+      Paths_SASL_Compiler
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , SASL-Compiler
+    , base >=4.7 && <5
+    , containers
+    , fgl
+    , graphviz
+    , haskeline
+    , hspec
+    , megaparsec
+    , mtl
+    , optparse-applicative
+    , text
+  default-language: Haskell2010
+
+benchmark countmin-bench
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Paths_SASL_Compiler
+  hs-source-dirs:
+      bench
+  ghc-options: -Wall
+  build-depends:
+      SASL-Compiler
+    , base >=4.7 && <5
+    , containers
+    , criterion
+    , fgl
+    , graphviz
+    , haskeline
+    , megaparsec
+    , mtl
+    , optparse-applicative
+    , text
+  default-language: Haskell2010

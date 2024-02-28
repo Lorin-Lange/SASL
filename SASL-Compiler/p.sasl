@@ -1,0 +1,4 @@
+def f x = g x
+  where g x = g x
+.
+f 1

@@ -1,0 +1,28 @@
+def filter p l = if   l = nil
+                 then l
+                 else (if   p (hd l)
+                       then (hd l) : filter p (tl l)
+                       else filter p (tl l))
+
+def take n l = if   n = 0 or l = nil
+               then nil
+               else hd l : take (n - 1) (tl l)
+
+def takeWhile p l = if l = nil
+                    then l
+                    else (if   p (hd l)
+                          then (hd l) : takeWhile p (tl l)
+                          else nil)
+
+def from n = n : from (n + 1)
+
+def primes = 2 : filter isPrime (from 3)
+
+def isPrime x = (filter (p x) (options x)) = nil
+  where p n m = m * (n / m) = n;
+        options n = takeWhile (q n) primes;
+        q n m = m * m <= n
+
+.
+
+take 5 primes

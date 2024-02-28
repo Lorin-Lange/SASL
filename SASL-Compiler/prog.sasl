@@ -1,0 +1,11 @@
+def testList = [7465, 95339, 79651, -68109, -73630, -40957, -18042, 27844, -52486]
+def append3 l1 l2 = append $ append l1 l2
+def qsort list = if list = nil then nil
+                               else append3 (qsort l) [p] (qsort r)
+                                where
+                                   p  = hd list;
+                                   rl = tl list;
+                                   l  = filter (geq p) rl;
+                                   r  = filter (lt p) rl
+.
+qsort testList

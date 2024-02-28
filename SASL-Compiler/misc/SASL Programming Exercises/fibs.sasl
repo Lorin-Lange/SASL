@@ -1,0 +1,26 @@
+def naiveFib n = if n <= 1 then (if n = 0 then 0 else 1)
+                           else (naiveFib (n - 1)) + (naiveFib (n - 2))
+def r = naiveFib 10
+def take n l = if n = 0 or l = nil then nil
+                                   else x : take (n - 1) xs
+                                        where x  = hd l;
+                                              xs = tl l
+def tail l = if l = nil then nil else tl l
+def zipWith f l1 l2 = if l1 = nil or l2 = nil then nil
+                                              else (f x y) : zipWith f xs ys
+                                                where
+                                                  x  = hd l1;
+                                                  y  = hd l2;
+                                                  xs = tail l1;
+                                                  ys = tail l2
+def fibs = 0 : 1 : zipWith add fibs (tl fibs)
+            where
+               add a b = a + b
+def last l = if l = nil then nil
+                        else (if xs = nil then x else last xs)
+                          where
+                            x  = hd l;
+                            xs = tl l
+def fib n = last (take (n + 1) fibs)
+.
+fib 10
